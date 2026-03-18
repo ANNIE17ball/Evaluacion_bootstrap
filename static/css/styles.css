@@ -1,5 +1,13 @@
 .big {
-    transition: transform 0.5s ease-in-out; /* Más lento y suave */
+    transition: transform 0.5s ease-in-out;
+    /* Más lento y suave */
+}
+
+body {
+    overflow-x: hidden;
+    /* EVITA la barra de desplazamiento horizontal */
+    width: 100%;
+    max-width: 100%;
 }
 
 .big:hover {
@@ -19,33 +27,75 @@
 }
 
 :root {
-    --color1: #fff8e7; 
+    --color1: #fff8e7;
     --color2: #8cc1e9;
     --color3: #12284b;
-    --color4: #0055a0; 
-    --color5: #438bc4; 
+    --color4: #0055a0;
+    --color5: #438bc4;
 }
 
 /* Background colors */
-.bg-color1 { background-color: var(--color1); }
-.bg-color2 { background-color: var(--color2); }
-.bg-color3 { background-color: var(--color3); }
-.bg-color4 { background-color: var(--color4); }
-.bg-color5 { background-color: var(--color5); }
+.bg-color1 {
+    background-color: var(--color1);
+}
+
+.bg-color2 {
+    background-color: var(--color2);
+}
+
+.bg-color3 {
+    background-color: var(--color3);
+}
+
+.bg-color4 {
+    background-color: var(--color4);
+}
+
+.bg-color5 {
+    background-color: var(--color5);
+}
 
 /* Text colors */
-.text-color1 { color: var(--color1); }
-.text-color2 { color: var(--color2); }
-.text-color3 { color: var(--color3); }
-.text-color4 { color: var(--color4); }
-.text-color5 { color: var(--color5); }
+.text-color1 {
+    color: var(--color1);
+}
+
+.text-color2 {
+    color: var(--color2);
+}
+
+.text-color3 {
+    color: var(--color3);
+}
+
+.text-color4 {
+    color: var(--color4);
+}
+
+.text-color5 {
+    color: var(--color5);
+}
 
 /* Border colors */
-.border-color1 { border-color: var(--color1); }
-.border-color2 { border-color: var(--color2); }
-.border-color3 { border-color: var(--color3); }
-.border-color4 { border-color: var(--color4); }
-.border-color5 { border-color: var(--color5); }
+.border-color1 {
+    border-color: var(--color1);
+}
+
+.border-color2 {
+    border-color: var(--color2);
+}
+
+.border-color3 {
+    border-color: var(--color3);
+}
+
+.border-color4 {
+    border-color: var(--color4);
+}
+
+.border-color5 {
+    border-color: var(--color5);
+}
 
 /* Border with default width (1px) */
 .border-color1,
@@ -58,27 +108,117 @@
 }
 
 /* Optional: Outline colors */
-.outline-color1 { outline-color: var(--color1); }
-.outline-color2 { outline-color: var(--color2); }
-.outline-color3 { outline-color: var(--color3); }
-.outline-color4 { outline-color: var(--color4); }
-.outline-color5 { outline-color: var(--color5); }
+.outline-color1 {
+    outline-color: var(--color1);
+}
+
+.outline-color2 {
+    outline-color: var(--color2);
+}
+
+.outline-color3 {
+    outline-color: var(--color3);
+}
+
+.outline-color4 {
+    outline-color: var(--color4);
+}
+
+.outline-color5 {
+    outline-color: var(--color5);
+}
 
 /* Optional: Hover effects */
-.hover-bg-color1:hover { background-color: var(--color1); }
-.hover-bg-color2:hover { background-color: var(--color2); }
-.hover-bg-color3:hover { background-color: var(--color3); }
-.hover-bg-color4:hover { background-color: var(--color4); }
-.hover-bg-color5:hover { background-color: var(--color5); }
+.hover-bg-color1:hover {
+    background-color: var(--color1);
+}
 
-.hover-text-color1:hover { color: var(--color1); }
-.hover-text-color2:hover { color: var(--color2); }
-.hover-text-color3:hover { color: var(--color3); }
-.hover-text-color4:hover { color: var(--color4); }
-.hover-text-color5:hover { color: var(--color5); }
+.hover-bg-color2:hover {
+    background-color: var(--color2);
+}
 
-.hover-border-color1:hover { border-color: var(--color1); }
-.hover-border-color2:hover { border-color: var(--color2); }
-.hover-border-color3:hover { border-color: var(--color3); }
-.hover-border-color4:hover { border-color: var(--color4); }
-.hover-border-color5:hover { border-color: var(--color5); }
+.hover-bg-color3:hover {
+    background-color: var(--color3);
+}
+
+.hover-bg-color4:hover {
+    background-color: var(--color4);
+}
+
+.hover-bg-color5:hover {
+    background-color: var(--color5);
+}
+
+.hover-text-color1:hover {
+    color: var(--color1);
+}
+
+.hover-text-color2:hover {
+    color: var(--color2);
+}
+
+.hover-text-color3:hover {
+    color: var(--color3);
+}
+
+.hover-text-color4:hover {
+    color: var(--color4);
+}
+
+.hover-text-color5:hover {
+    color: var(--color5);
+}
+
+.hover-border-color1:hover {
+    border-color: var(--color1);
+}
+
+.hover-border-color2:hover {
+    border-color: var(--color2);
+}
+
+.hover-border-color3:hover {
+    border-color: var(--color3);
+}
+
+.hover-border-color4:hover {
+    border-color: var(--color4);
+}
+
+.hover-border-color5:hover {
+    border-color: var(--color5);
+}
+
+
+/* Estilos para que todas las tarjetas tengan el mismo tamaño */
+.card {
+    height: 100%;
+    /* Hace que la tarjeta ocupe toda la altura de la columna */
+    transition: transform 0.3s ease;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Altura fija para las imágenes de las tarjetas */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    /* Mantiene la proporción de la imagen */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Asegura que todas las tarjetas tengan la misma altura en la fila */
+.row-cols-1>.col {
+    display: flex;
+}
+
+/* Estilos adicionales para el carrusel */
+.carousel-item img {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
