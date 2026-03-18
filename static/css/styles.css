@@ -1,224 +1,289 @@
-.big {
-    transition: transform 0.5s ease-in-out;
-    /* Más lento y suave */
-}
+/* ====================================================================
+   GEMINI HOME ENTERTAINMENT — ESTILOS PRINCIPALES
+   ==================================================================== */
 
-body {
-    overflow-x: hidden;
-    /* EVITA la barra de desplazamiento horizontal */
-    width: 100%;
-    max-width: 100%;
-}
-
-.big:hover {
-    transform: scale(1.08);
-}
-
-.loud-text {
-    font-family: "Fascinate", system-ui;
-}
-
-.calm-text {
-    font-family: "Noto Sans Mono", monospace;
-}
-
-.kid-text {
-    font-family: "Shadows Into Light Two", cursive;
-}
-
+/* ── VARIABLES GLOBALES ────────────────────────────────── */
 :root {
-    --color1: #ad0013;
-    --color2: #a67e43;
-    --color3: #121312;
-    --color4: #0055a0;
-    --color5: #438bc4;
+    --color1: #8b0010;        /* rojo sangre */
+    --color2: #5b82b0;        /* azul acero */
+    --color3: #080c10;        /* negro azulado */
+    --color4: #2e4a6a;        /* azul pizarra */
+    --color5: #1a2d42;        /* azul marino */
+    --color6: #c8d8e8;        /* azul hielo */
+    --iris-orange: #c85a00;   
+    --iris-dark: #7a3200;     
 }
 
-/* Background colors */
-.bg-color1 {
-    background-color: var(--color1);
+/* ── BASE ───────────────────────────────────────────────── */
+html, body {
+    background-color: #080c10 !important;
+    margin: 0;
+    min-height: 100vh;
+    color: var(--color6);
 }
 
-.bg-color2 {
-    background-color: var(--color2);
+/* ── TIPOGRAFÍA ─────────────────────────────────────────── */
+.barra-text {
+    font-family: "Libre Barcode 39 Extended", system-ui;
+    color: #8b0010;
+    font-size: 1.2rem;
 }
 
-.bg-color3 {
+.special-text {
+    font-family: "Special Elite", system-ui;
+}
+
+.rel-text {
+    font-family: "Revalia", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+/* ── NAVBAR ─────────────────────────────────────────────── */
+.navbar {
+    background-color: #1c2a3a;
+    border-bottom: 1px solid #2e4a6a;
+}
+
+.navbar-brand {
+    color: var(--color2) !important;
+}
+
+.nav-link {
+    color: var(--color6) !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color2) !important;
+}
+
+.nav-link:last-child {
+    color: var(--color1) !important;
+}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+header {
+    position: relative;
+    overflow: hidden;
+    min-height: 340px;
     background-color: var(--color3);
 }
 
-.bg-color4 {
-    background-color: var(--color4);
+header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            transparent 0%,
+            transparent 45%,
+            rgba(5, 5, 10, 0.82) 100%);
+    pointer-events: none;
+    z-index: 1;
 }
 
-.bg-color5 {
-    background-color: var(--color5);
+.header-content {
+    position: relative;
+    z-index: 2;
 }
 
-/* Text colors */
-.text-color1 {
-    color: var(--color1);
-}
-
-.text-color2 {
-    color: var(--color2);
-}
-
-.text-color3 {
-    color: var(--color3);
-}
-
-.text-color4 {
-    color: var(--color4);
-}
-
-.text-color5 {
-    color: var(--color5);
-}
-
-/* Border colors */
-.border-color1 {
-    border-color: var(--color1);
-}
-
-.border-color2 {
-    border-color: var(--color2);
-}
-
-.border-color3 {
-    border-color: var(--color3);
-}
-
-.border-color4 {
-    border-color: var(--color4);
-}
-
-.border-color5 {
-    border-color: var(--color5);
-}
-
-/* Border with default width (1px) */
-.border-color1,
-.border-color2,
-.border-color3,
-.border-color4,
-.border-color5 {
-    border-style: solid;
-    border-width: 1px;
-}
-
-/* Optional: Outline colors */
-.outline-color1 {
-    outline-color: var(--color1);
-}
-
-.outline-color2 {
-    outline-color: var(--color2);
-}
-
-.outline-color3 {
-    outline-color: var(--color3);
-}
-
-.outline-color4 {
-    outline-color: var(--color4);
-}
-
-.outline-color5 {
-    outline-color: var(--color5);
-}
-
-/* Optional: Hover effects */
-.hover-bg-color1:hover {
+.header-content h1 {
+    color: var(--color6);
     background-color: var(--color1);
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 10px;
 }
 
-.hover-bg-color2:hover {
-    background-color: var(--color2);
-}
-
-.hover-bg-color3:hover {
-    background-color: var(--color3);
-}
-
-.hover-bg-color4:hover {
-    background-color: var(--color4);
-}
-
-.hover-bg-color5:hover {
-    background-color: var(--color5);
-}
-
-.hover-text-color1:hover {
-    color: var(--color1);
-}
-
-.hover-text-color2:hover {
+.header-content span {
     color: var(--color2);
+    background-color: rgba(8, 12, 16, 0.7);
+    display: inline-block;
+    padding: 5px 10px;
 }
 
-.hover-text-color3:hover {
-    color: var(--color3);
+/* ── OJO ────────────────────────────────────────────────── */
+.iris-container {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    pointer-events: none;
 }
 
-.hover-text-color4:hover {
-    color: var(--color4);
+.iris-outer-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 38% 32%,
+            #ffcc44 0%, #ff7a00 18%, #d44000 42%, 
+            #7a2200 70%, #3a0e00 88%, #1a0400 100%);
+    box-shadow: 0 0 0 5px var(--iris-orange),
+                0 0 50px rgba(210, 80, 0, 0.45),
+                0 0 100px rgba(180, 60, 0, 0.2);
 }
 
-.hover-text-color5:hover {
-    color: var(--color5);
+.iris-sclera {
+    position: absolute;
+    inset: 16%;
+    border-radius: 50%;
+    background: radial-gradient(circle at center,
+            #0a0500 0%, #020100 60%, #000000 100%);
 }
 
-.hover-border-color1:hover {
-    border-color: var(--color1);
+.iris-ball {
+    position: absolute;
+    width: 46%;
+    height: 46%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.07s ease-out;
+    background: radial-gradient(circle at 35% 32%,
+            #ffe066 0%, #ffaa22 22%, #e06000 50%, 
+            #aa3800 78%, #5a1800 100%);
+    box-shadow: 0 0 0 3px rgba(100, 40, 0, 0.5),
+                0 0 20px rgba(230, 100, 0, 0.5),
+                0 0 45px rgba(200, 70, 0, 0.25);
 }
 
-.hover-border-color2:hover {
-    border-color: var(--color2);
+.iris-vignette {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.55) 28%,
+            rgba(0, 0, 0, 0.15) 58%,
+            transparent 100%);
+    z-index: 3;
+    pointer-events: none;
 }
 
-.hover-border-color3:hover {
-    border-color: var(--color3);
-}
-
-.hover-border-color4:hover {
-    border-color: var(--color4);
-}
-
-.hover-border-color5:hover {
-    border-color: var(--color5);
-}
-
-
-/* Estilos para que todas las tarjetas tengan el mismo tamaño */
+/* ── TARJETAS ───────────────────────────────────────────── */
 .card {
-    height: 100%;
-    /* Hace que la tarjeta ocupe toda la altura de la columna */
-    transition: transform 0.3s ease;
-    border: 1px solid #dee2e6;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #1e2a38 !important;
+    border: 1px solid #3a5068 !important;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+.card-title {
+    color: #8aaac8 !important;
 }
 
-/* Altura fija para las imágenes de las tarjetas */
+.card-text {
+    color: #b8c8d8 !important;
+}
+
 .card-img-top {
     height: 200px;
     object-fit: cover;
-    /* Mantiene la proporción de la imagen */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* Asegura que todas las tarjetas tengan la misma altura en la fila */
-.row-cols-1>.col {
-    display: flex;
+/* ── SLIDESHOW ──────────────────────────────────────────── */
+.card-slideshow {
+    background-color: #1e2a38;
 }
 
-/* Estilos adicionales para el carrusel */
+.slideshow-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.slideshow-wrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: none;  /* Sin transición suave */
+}
+
+.slideshow-wrap img.slide-active {
+    opacity: 1;
+}
+
+/* ── TÍTULO DEL HEADER (FLASHES) ───────────────────────── */
+#headerTitle {
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+#headerTitle.flash-mode {
+    color: #ffffff !important;
+    background-color: #8b0010 !important;
+    font-family: "Libre Barcode 39 Extended", system-ui !important;
+    font-size: 2.2rem !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7) !important;
+    transform: scale(1.05);
+    border: 2px solid #ffffff;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+@keyframes headerFlashPanic {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+#headerTitle.panic-flash {
+    animation: headerFlashPanic 0.1s infinite !important;
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border-color: #8b0010 !important;
+}
+
+/* ── SECCIONES ESPECIALES ──────────────────────────────── */
+.cabañas-section, .juego-section {
+    background-color: #2a1f18;
+    border-top: 1px solid #7a5a3a;
+    border-bottom: 1px solid #7a5a3a;
+}
+
+.cabañas-section h4, .juego-section h4 {
+    color: #c8a878;
+}
+
+.cabañas-section p, .juego-section p {
+    color: #c0b09a;
+}
+
+/* ── CARRUSEL BOOTSTRAP ─────────────────────────────────── */
 .carousel-item img {
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    object-fit: cover;
+}
+
+/* ── VIDEO ──────────────────────────────────────────────── */
+video {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+footer {
+    background-color: #1c2a3a;
+    border-top: 1px solid #2e4a6a;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #c8d8e8;
+}
+
+footer a {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
