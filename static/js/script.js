@@ -89,7 +89,7 @@
             "ELLOS TE MIRAN",
             "SAL DE CASA",
             "NO ESTÁS SEGURO",
-            "IRUS TE BUSCA",
+            "IRIS TE BUSCA",
             "EL BOSQUE LLAMA",
             "CORRE",
             "YA VIERON",
